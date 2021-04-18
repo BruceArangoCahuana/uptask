@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        include partial/header
+    body.login
+        .contenedor-formulario
+            h1= nombrePagina
+            p Actualiza contraseña
+            
+            form.caja-login(action="", method="post") 
+                .campo 
+                    label(for="password") Nueva contraseña: 
+                    input(type="password" name="password" placeholder="Nueva contraseña") 
+                .campo.enviar 
+                    input.boton(type="submit", value="Actualizar contraseña")
