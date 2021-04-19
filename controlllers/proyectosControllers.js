@@ -11,11 +11,11 @@ exports.proyectosHome = async(req,res)=>{
         proyectos
     });
 }
-exports.formularioProyecto = async(req,resp)=>{
+exports.formularioProyecto = async(req,res)=>{
     const usuarioId = res.locals.usuario.id;
     //traemos los datos insertado en la db
     const proyectos =  await Proyectos.findAll({where:{usuarioId:usuarioId}});
-    resp.render('nuevoProyecto',{
+    res.render('nuevoProyecto',{
         nombrePagina: 'Nuevo Proyecto',
         proyectos
     })
